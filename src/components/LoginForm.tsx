@@ -71,7 +71,7 @@ const LoginForm: React.FC = () => {
         setIsLoading(true);
 
         try {
-            await signIn.social({ provider: "google", callbackURL: "http://localhost:5173/dashboard" });
+            await signIn.social({ provider: "google", callbackURL: "/dashboard" });
         } catch (error) {
             toast({
                 title: "Error de inicio de sesión",
@@ -92,7 +92,7 @@ const LoginForm: React.FC = () => {
             // 
             // redirect to GitHub OAuth
             //   await new Promise(resolve => setTimeout(resolve, 1000));
-            await signIn.social({ provider: "github", callbackURL: "http://localhost:5173/dashboard" });
+            await signIn.social({ provider: "github", callbackURL: "/dashboard" });
 
             //   toast({
             //     title: "Autenticación con GitHub",

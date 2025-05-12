@@ -38,7 +38,7 @@ const SignUpForm: React.FC = () => {
           email,
           password,
           name,
-          callbackURL: "/dashboard", // Redirección post-verificación
+          callbackURL: "/dashboard",
         },
         {
           onRequest: () => {
