@@ -13,7 +13,7 @@ export const SocialLogin = () => {
 
     const handleGoogleLogin = async () => {
         try {
-            await signIn.social({ provider: "google", callbackURL: "http://localhost:5173/dashboard" });
+            await signIn.social({ provider: "google", callbackURL: "/dashboard" });
         } catch (error) {
             toast({
                 title: "Error de inicio de sesión",
@@ -25,7 +25,7 @@ export const SocialLogin = () => {
 
     const handleGithubLogin = async () => {
         try {
-            await signIn.social({ provider: "github", callbackURL: "http://localhost:5173/dashboard" });
+            await signIn.social({ provider: "github", callbackURL: "/dashboard" });
         } catch (error) {
             toast({
                 title: "Error de inicio de sesión",
