@@ -13,7 +13,7 @@ export const SocialLogin = () => {
 
     const handleGoogleLogin = async () => {
         try {
-            await signIn.social({ provider: "google", callbackURL: "/dashboard" });
+            await signIn.social({ provider: "google", callbackURL: "https://ideco-lms-client-production.up.railway.app/dashboard" });
         } catch (error) {
             toast({
                 title: "Error de inicio de sesión",
@@ -25,7 +25,7 @@ export const SocialLogin = () => {
 
     const handleGithubLogin = async () => {
         try {
-            await signIn.social({ provider: "github", callbackURL: "/dashboard" });
+            await signIn.social({ provider: "github", callbackURL: "https://ideco-lms-client-production.up.railway.app/dashboard" });
         } catch (error) {
             toast({
                 title: "Error de inicio de sesión",
