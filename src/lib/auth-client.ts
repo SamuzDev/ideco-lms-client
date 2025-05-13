@@ -5,6 +5,10 @@ export const { useSession, signIn, signOut, signUp, getSession, resetPassword, f
     baseURL: import.meta.env.VITE_API_URL as string,
     redirectTo: "/",
     plugins: [
-        twoFactorClient()
+        twoFactorClient({
+            onTwoFactorRedirect() {
+                window.location.href = "/2fa";
+            },
+        })
     ]
 })

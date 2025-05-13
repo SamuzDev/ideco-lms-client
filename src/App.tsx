@@ -40,6 +40,7 @@ const App = () => {
             <Route path="/forgot-password" element={<ForgotPasswordForm />} />
             <Route path="/reset-password" element={<ResetPasswordForm />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/2fa" element={<Profile />} />
             <Route path="dashboard" element={<Dashboard />}>
               <Route path="settings" element={<Settings />} />
             </Route>

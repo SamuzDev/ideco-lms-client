@@ -58,11 +58,20 @@ export const SignInForm = () => {
                     onRequest: () => {
                         console.log("Iniciando sesión...");
                     },
-                    onSuccess: () => {
+                    onSuccess: async (ctx) => {
+                        if (ctx.data?.twoFactorRedirect) {
+                            // Redirige al usuario a la página de verificación 2FA
+                            window.location.href = "/2fa";
+                            return;
+                        }
+
                         toast({
                             title: "Sesión iniciada",
                             description: "Redirigiendo al dashboard...",
                         });
+
+                        // Redirige al dashboard si no se requiere 2FA
+                        window.location.href = "/dashboard";
                     },
                     onError: (ctx) => {
                         toast({
