@@ -60,7 +60,6 @@ export const SignInForm = () => {
                     },
                     onSuccess: async (ctx) => {
                         if (ctx.data?.twoFactorRedirect) {
-                            // Redirige al usuario a la página de verificación 2FA
                             window.location.href = "/2fa";
                             return;
                         }
@@ -70,7 +69,6 @@ export const SignInForm = () => {
                             description: "Redirigiendo al dashboard...",
                         });
 
-                        // Redirige al dashboard si no se requiere 2FA
                         window.location.href = "/dashboard";
                     },
                     onError: (ctx) => {

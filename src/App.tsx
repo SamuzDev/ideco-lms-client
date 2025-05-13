@@ -18,6 +18,7 @@ import { SignUpForm } from "./components/auth/SignUpForm";
 import { ForgotPasswordForm } from "./components/auth/ForgotPasswordForm";
 import { ResetPasswordForm } from "./components/auth/ResetPasswordForm";
 import Profile from "./pages/Profile";
+import TwoFactorPage from "./pages/TwoFactor";
 
 const queryClient = new QueryClient();
 
@@ -40,7 +41,7 @@ const App = () => {
             <Route path="/forgot-password" element={<ForgotPasswordForm />} />
             <Route path="/reset-password" element={<ResetPasswordForm />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/2fa" element={<Profile />} />
+            <Route path="/2fa" element={<TwoFactorPage />} />
             <Route path="dashboard" element={<Dashboard />}>
               <Route path="settings" element={<Settings />} />
             </Route>
